@@ -1,0 +1,7 @@
+[
+  {"id":"paid_total","question":"What is the total paid order amount?","sql":"SELECT SUM(amount) FROM orders WHERE status='paid'","expected":[[300.0]]},
+  {"id":"order_count","question":"How many orders exist?","sql":"SELECT COUNT(*) FROM orders","expected":[[4]]},
+  {"id":"regional_revenue","question":"Paid revenue by region, sorted by region ascending?","sql":"SELECT c.region,SUM(o.amount) FROM customers c JOIN orders o ON c.id=o.customer_id WHERE o.status='paid' GROUP BY c.region ORDER BY c.region","expected":[["East",80.0],["West",220.0]]},
+  {"id":"no_matches","question":"List order IDs with amount above 1000, sorted ascending.","sql":"SELECT id FROM orders WHERE amount>1000 ORDER BY id","expected":[]},
+  {"id":"refunds","question":"What is the refunded amount?","sql":"SELECT SUM(amount) FROM orders WHERE status='refunded'","expected":[[50.0]]}
+]

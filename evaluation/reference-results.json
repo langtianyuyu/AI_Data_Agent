@@ -1,0 +1,94 @@
+{
+  "mode": "reference-sql-only",
+  "passed": 5,
+  "total": 5,
+  "cases": [
+    {
+      "id": "paid_total",
+      "passed": true,
+      "actual": [
+        [
+          300.0
+        ]
+      ],
+      "expected": [
+        [
+          300.0
+        ]
+      ],
+      "response": {
+        "status": "ok"
+      }
+    },
+    {
+      "id": "order_count",
+      "passed": true,
+      "actual": [
+        [
+          4
+        ]
+      ],
+      "expected": [
+        [
+          4
+        ]
+      ],
+      "response": {
+        "status": "ok"
+      }
+    },
+    {
+      "id": "regional_revenue",
+      "passed": true,
+      "actual": [
+        [
+          "East",
+          80.0
+        ],
+        [
+          "West",
+          220.0
+        ]
+      ],
+      "expected": [
+        [
+          "East",
+          80.0
+        ],
+        [
+          "West",
+          220.0
+        ]
+      ],
+      "response": {
+        "status": "ok"
+      }
+    },
+    {
+      "id": "no_matches",
+      "passed": true,
+      "actual": [],
+      "expected": [],
+      "response": {
+        "status": "ok"
+      }
+    },
+    {
+      "id": "refunds",
+      "passed": true,
+      "actual": [
+        [
+          50.0
+        ]
+      ],
+      "expected": [
+        [
+          50.0
+        ]
+      ],
+      "response": {
+        "status": "ok"
+      }
+    }
+  ]
+}

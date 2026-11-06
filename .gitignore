@@ -9,3 +9,6 @@ wheels/
 # Virtual environments
 .venv
 .env
+
+*.sqlite
+evaluation/live-results*.json
